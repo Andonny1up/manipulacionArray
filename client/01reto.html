@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    hola
+    <div id="app"></div>
+    <script>
+        const tasks = [
+            { title: 'make dinner', done: false },
+            { title: 'sweep the floor', done: true },
+            { title: 'feed the kittens', done: true },
+            { title: 'buy groceries', done: false },
+            { title: 'take a bath', done: true },
+        ];
+        const app = document.getElementById('app');
+        tasks.forEach(task =>{
+            app.innerHTML +=`<li>${task.title} - ${task.done}<input type="checkbox" ${task.done ? 'checked' : ''}/></li>`
+        })
+    </script>
+</body>
+</html>
